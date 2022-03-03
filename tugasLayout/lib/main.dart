@@ -37,11 +37,6 @@ class MyApp extends StatelessWidget {
                         border: OutlineInputBorder(
                             borderRadius: new BorderRadius.circular(5.0)),
                       ),
-                      onSaved: (String? value) {
-                      },
-                      validator: (String? value) {
-                        return (value != null && value.contains('@')) ? 'Do not use the @ char.' : null;
-                      }
                       )
               )
               ),
@@ -49,31 +44,27 @@ class MyApp extends StatelessWidget {
               Container(
                   width: 500.0,
                   child: TextFormField(
-                  decoration: new InputDecoration(
-                    labelText: 'Password',
-                    border: OutlineInputBorder(
-                        borderRadius: new BorderRadius.circular(5.0)),
-                  ),
-                      onSaved: (String? value) {
-                      },
-                      validator: (String? value) {
-                        return (value != null && value.contains('@')) ? 'Do not use the @ char.' : null;
-                     }
+                      obscureText: true,
+                      decoration: new InputDecoration(
+                        labelText: 'Password',
+                        border: OutlineInputBorder(
+                            borderRadius: new BorderRadius.circular(5.0)),
+                      ),
                      )
               ),
               SizedBox(height: 20),
               Container(
-                  width: 500.0,
-                  height: 50,
-                  child:Card(
-                      color: Colors.blue,
-                      elevation: 5,
-                      child: Center(
-                        child: Text("Log In", style: TextStyle(color: Colors.white, fontSize: 18)),
-                      )
-                  )
+                width: 500,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Log In'),
+                ),
               ),
-              Text("Forgot Password?"),
+              SizedBox(height: 5),
+              TextButton(
+                onPressed: () {}, 
+                child: Text("Forgot Password?", style: TextStyle(color: Colors.black)),
+              )
             ]
           ),
         ),
