@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
               ),
               SizedBox(height: 5),
               TextButton(
-                onPressed: () {}, 
+                onPressed: () {},
                 child: Text("Forgot Password?", style: TextStyle(color: Colors.black)),
               )
             ]
